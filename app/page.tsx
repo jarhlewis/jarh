@@ -35,14 +35,14 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          I'm building global supply chain traceability systems at {" "}
+          I'm building traceability systems at {" "}
           <Link
             target="_blank"
             href="https://psqr.eu"
             className="underline duration-500 hover:text-zinc-300"
           >
             PSQR
-          </Link> to solve observability, compliance, and automation challenges across several industries.
+          </Link>, to solve observability, compliance, and automation challenges across the globe.
         </h2>
       </div>
     </div>
