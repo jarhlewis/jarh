@@ -6,16 +6,16 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "jarh.com",
-    template: "%s | jarh.com",
+    default: "Jarh Lewis",
+    template: "%s | Jarh Lewis",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Software engineer based in Copenhagen, Denmark",
   openGraph: {
-    title: "jarh.com",
+    title: "Jarh Lewis",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "Software engineer based in Copenhagen, Denmark",
     url: "https://jarh.com",
-    siteName: "jarh.com",
+    siteName: "Jarh Lewis",
     images: [
       {
         url: "https://jarh.com/og.png",
@@ -36,10 +36,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
   },
   icons: {
     shortcut: "/favicon.png",
