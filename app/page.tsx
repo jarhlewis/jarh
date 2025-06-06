@@ -3,7 +3,7 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
+  // { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -28,24 +28,26 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-      <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        chronark
+      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+        Jarh Lewis
       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-      <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">
-          I'm building{" "}
+      <div className="my-16 text-center animate-fade-in px-10 md:px-40">
+        <h2 className="text-sm text-zinc-500">
+          I'm building software 4 days a week at{" "}
           <Link
             target="_blank"
-            href="https://unkey.dev"
+            href="https://abtion.io"
             className="underline duration-500 hover:text-zinc-300"
           >
-            unkey.dev
-          </Link> to solve API authentication and authorization for developers.
+            Abtion A/S
+          </Link>
+          , to help organizations reach more customers, improve existing
+          services, solve technical challenges, innovate towards a better
+          future, and reinvent themselves in the process.
         </h2>
       </div>
     </div>
   );
-
 }

@@ -1,7 +1,7 @@
 "use client";
-import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Mail } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
 	project: {
@@ -17,6 +17,24 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
 
+	const extractDomain = useCallback((url: string) => {
+		let domain;
+		// Find & remove protocol (http, ftp, etc.) and get the domain
+		if (url.indexOf("://") > -1) {
+		  domain = url.split("/")[2];
+		} else {
+		  domain = url.split("/")[0];
+		}
+
+		// Find & remove port number
+		domain = domain.split(":")[0];
+
+		// Find & remove query string
+		domain = domain.split("?")[0];
+
+		return domain;
+	}, []);
+
 	const links: { label: string; href: string }[] = [];
 	if (project.repository) {
 		links.push({
@@ -26,7 +44,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	}
 	if (project.url) {
 		links.push({
-			label: "Website",
+			label: extractDomain(project.url),
 			href: project.url,
 		});
 	}
@@ -67,7 +85,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								views,
 							)}
 						</span>
-						<Link target="_blank" href="https://twitter.com/chronark_">
+						{/* <Link target="_blank" href="https://twitter.com/chronark_">
 							<Twitter
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -78,6 +96,15 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 						</Link>
 						<Link target="_blank" href="https://github.com/chronark">
 							<Github
+								className={`w-6 h-6 duration-200 hover:font-medium ${
+									isIntersecting
+										? " text-zinc-400 hover:text-zinc-100"
+										: "text-zinc-600 hover:text-zinc-900"
+								} `}
+							/>
+						</Link> */}
+						<Link target="_blank" href="mailto:jarhra96@gmail.com">
+							<Mail
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
 										? " text-zinc-400 hover:text-zinc-100"
